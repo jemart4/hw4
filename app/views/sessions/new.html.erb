@@ -1,14 +1,18 @@
 <h1>Login</h1>
 
 <form action="/sessions" method="post">
-  <p>
-    <label for="email_input">Email</label>
-    <input type="text" name="email" id="email_input">
+  
+  <div class="mb-3">
+    <label for="email_input" class="form-label">Email</label>
+    <input type="text" name="email" id="email_input" class="form-control">
+  </div>
 
-    <label for="password_input">Password</label>
-    <input type="text" name="password" id="password_input"> 
-    <!-- type password hides when typing in, if need to hide it change input type to passowrd  -->
-  </p>
+  <div class="mb-3">
+    <label for="password_input" class="form-label" >Password</label>
+    <input type="password" name="password" id="password_input" class="form-control">
+  </div>
+  
 
-  <button>Login</button>
+
+  <button class="btn btn-success">Login</button>
 </form>
