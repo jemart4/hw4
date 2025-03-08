@@ -12,16 +12,17 @@
   <body>
     
     <div>
+<%if session["user_id"] !=nil %>
       <a href="/">Home</a>|
-      <a href="/logout">Logout</a>|
+      <a href="/logout">Logout</a>
+      Hey, <%= session["username"] #displays username if exsists%> 
+
+      
+      
+<%else%>
       <a href="/login">Login</a>|
       <a href="/users/new">Signup</a>
-<%#if session["user_id"] !=nil %>
-      <%#put conditional in here%>
-      <%#display username if exsists%>
-<%#else%>
-  
-<%#end%>
+<%end%>
     </div>
 
     <%= yield %>
@@ -29,7 +30,7 @@
     <div>
       <%= flash["notice"] %>
     </div>
-    
+
   </body>
 
 

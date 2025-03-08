@@ -16,7 +16,8 @@ class SessionsController < ApplicationController
           # cookies follow that user from page to page within the website 
           
           session["user_id"] = @user["id"]
-
+          session["username"] = @user["username"]
+          
           flash["notice"] = "Welcome."
           redirect_to "/places"
         else
