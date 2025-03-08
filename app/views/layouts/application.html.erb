@@ -10,16 +10,27 @@
   </head>
 
   <body>
+    
     <div>
-      <%= flash["notice"] %>
-    </div>
-    <div>
-      <a href="/">Home</a>
-      <a href="/logout">Logout</a>
-      <a href="/login">Login</a>
+      <a href="/">Home</a>|
+      <a href="/logout">Logout</a>|
+      <a href="/login">Login</a>|
       <a href="/users/new">Signup</a>
+<%#if session["user_id"] !=nil %>
+      <%#put conditional in here%>
+      <%#display username if exsists%>
+<%#else%>
+  
+<%#end%>
     </div>
 
     <%= yield %>
+
+    <div>
+      <%= flash["notice"] %>
+    </div>
+    
   </body>
+
+
 </html>
