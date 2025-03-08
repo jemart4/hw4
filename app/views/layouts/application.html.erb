@@ -23,26 +23,26 @@
      <%if session["user_id"] !=nil %>
      
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <a class="nav-link active" aria-current="page" href="/">Home</a>  
+        <a class="btn btn-outline-secondary" aria-current="page" href="/" >Home</a>    
       </ul>
 
       <ul class="navbar-nav me-right mb-2 mb-lg-0"> 
           Hey, <%= session["username"] %> 
       </ul>
 
-      <ul class="navbar-nav me-right mb-3 mb-lg-0">
-        <a class="btn btn-outline-secondary" aria-current="page" href="/logout" >Logout</a>  
+      <ul class="navbar-nav ms-2 me-right mb-3 mb-lg-0">
+        <a class="btn btn-outline-danger" aria-current="page" href="/logout" >Logout</a>  
       </ul>
           
       
       
       <%else%>
 
-      <ul class="navbar-nav me-left mb-2 mb-lg-0">
-        <a class="nav-link active" aria-current="page" href="/login">Login</a>  
+      <ul class="navbar-nav ms-2 me-left mb-2 mb-lg-0">
+        <a class="btn btn-outline-secondary" aria-current="page" href="/login" >Login</a> 
       </ul>
-      <ul class="navbar-nav me-left mb-2 mb-lg-0">
-        <a class="nav-link active" aria-current="page" href="/users/new">Signup</a>  
+      <ul class="navbar-nav ms-2 me-left mb-2 mb-lg-0">
+        <a class="btn btn-outline-secondary" aria-current="page" href="/users/new" >Signup</a> 
       </ul>
       <%end%>
     </div>
