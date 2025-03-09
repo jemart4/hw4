@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get("/", { :controller => "places", :action => "index" })
+  get("/", { :controller => "sessions", :action => "new" })
   resources "entries"
   resources "places"
   resources "sessions"
