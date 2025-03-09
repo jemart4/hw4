@@ -1,16 +1,23 @@
 <h1><%= @place["name"] %></h1>
 
 <h2>My Entries</h2>
-<% for entry in @entries.where({"user_id"=> session["user_id"]}) %>
-  <h3><%= entry["title"] %></h3>
-  <h4><%= entry["occurred_on"] %></h4>
-  <p><%= entry["description"] %></p>
-<% end %>
+
+<div class="row">
+
+  <% for entry in @entries.where({"user_id"=> session["user_id"]}) %>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h3><%= entry["title"] %></h3>
+    <h4><%= entry["occurred_on"] %></h4>
+    <p><%= entry["description"] %></p>
+  </div>
+  <% end %>
+</div>
 
 <p>
-  <a class="btn btn-outline-secondary ms-2" aria-current="page" href="/entries/new?place_id=<%= @place["id"] %>" >New Entry</a>
+  <a class="btn btn-primary ms-2" aria-current="page" href="/entries/new?place_id=<%= @place["id"] %>" >New Entry</a>
 </p>
 
 <p>
-  <a href="/places">Back to All Places</a>
+  <a class="btn btn-outline-secondary ms-2" aria-current="page" href="/places" >Back to All Places</a>
 </p>
+

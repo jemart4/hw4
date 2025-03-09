@@ -4,13 +4,13 @@
 <%if session["user_id"] !=nil %>
 <ul>
   <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+    <a class="btn btn-primary mt-2 ms-2 " aria-current="page" href="/places/<%= place["id"] %>"><%= place["name"] %></a>
   <% end %>
 </ul>
 
 
 <p>
-  <a class="btn btn-secondary" aria-current="page" href="/places/new" >New place</a>
+  <a class="btn btn-outline-primary mt-3" aria-current="page" href="/places/new" >New place</a>
 </p>
 
 <%else%>
