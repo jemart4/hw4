@@ -7,7 +7,11 @@
   <% for entry in @entries.where({"user_id"=> session["user_id"]}) %>
   <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <h3><%= entry["title"] %></h3>
-    <h4><%= entry["occurred_on"] %></h4>
+    <h6><%= entry["occurred_on"] %></h6>
+    <%  if entry.uploaded_image.attached?%>
+      <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
+      <%else %>
+      <% end %>
     <p><%= entry["description"] %></p>
   </div>
   <% end %>
